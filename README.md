@@ -1,4 +1,4 @@
-# Ecommerce Product Page
+# E-Commerce Product Page
 
 ### Table of Contents
 * [Prerequisites](#Prerequisites)
