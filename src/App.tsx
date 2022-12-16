@@ -1,25 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import { BodyWrapper } from "./styled-components";
+import { Header, Main, Menu, Slider } from "./components";
+import { close } from "./images";
+import { useState } from "react";
 function App() {
+  const [count, setCount] = useState<Number>(0);
+  const [action, setAction] = useState<Number>(0);
+  const [num, setNum] = useState<Number>(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BodyWrapper action={action}>
+      <div className="forDark">
+        <Header
+          action={action}
+          setAction={setAction}
+          count={count}
+          setCount={setCount}
+          setNum={setNum}
+        />
+        <Main
+          setCount={setCount}
+          action={action}
+          setAction={setAction}
+          num={num}
+          setNum={setNum}
+        />
+      </div>
+      <Menu action={action} setAction={setAction} />
+      <div className="desktop-slider2">
+        <img
+          src={close}
+          className="close"
+          onClick={() => {
+            setAction(0);
+          }}
+        />
+        <Slider />
+      </div>
+    </BodyWrapper>
   );
 }
 
