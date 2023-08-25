@@ -18,7 +18,7 @@ const CartWrapper = styled.div`
   border-radius: 10px;
   box-shadow: 0px 20px 50px -20px rgba(29, 32, 38, 0.503143);
 
-  @media(min-width: 1300px) {
+  @media (min-width: 1300px) {
     margin-left: calc(50% + 180px);
   }
 
@@ -70,7 +70,7 @@ const CartWrapper = styled.div`
         height: 20px;
       }
     }
-    
+
     button {
       background-color: #ff7e1b;
       margin: 24px 18px;
@@ -85,7 +85,7 @@ const CartWrapper = styled.div`
       cursor: pointer;
 
       &:hover {
-        opacity: 0.6;
+        opacity: 0.5;
       }
     }
   }
